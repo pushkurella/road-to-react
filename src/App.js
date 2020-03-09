@@ -7,8 +7,8 @@ const Completionist = () => <span>You are good to go!</span>;
 const list = [
   {
     name: "Pushpak",
-    matchesWon: 1,
-    rank: 1,
+    matchesWon: 5,
+    rank: 3,
     objectID: 0
   },
   {
@@ -18,13 +18,13 @@ const list = [
     objectID: 1
   },
   {
-    name: "deva",
+    name: "Deva",
     matchesWon: 0,
     rank: 3,
     objectID: 2
   },
   {
-    name: "Abjeet",
+    name: "Abhijeet",
     matchesWon: 0,
     rank: 4,
     objectID: 3
@@ -32,7 +32,7 @@ const list = [
   {
     name: "Pallishree",
     matchesWon: 0,
-    rank: 5,
+    rank: 6,
     objectID: 4
   },
   {
@@ -42,48 +42,87 @@ const list = [
     objectID: 5
   },
   {
-    name: "Danielle",
+    name: "Ali",
     matchesWon: 0,
-    rank: 7,
+    rank: 1,
     objectID: 6
   },
   {
     name: "Brenton",
     matchesWon: 0,
-    rank: 8,
+    rank: 3,
     objectID: 7
   },
   {
     name: "Vikas",
     matchesWon: 0,
-    rank: 9,
+    rank: 5,
     objectID: 8
   },
   {
     name: "Abdi",
     matchesWon: 0,
-    rank: 10,
+    rank: 4,
     objectID: 9
   },
   {
     name: "Morgenne",
     matchesWon: 0,
-    rank: 11,
+    rank: 6,
     objectID: 10
+  },
+  {
+    name: "Francis",
+    matchesWon: 0,
+    rank: 2,
+    objectID: 11
+  },
+  {
+    name: "Yilun Bai",
+    matchesWon: 0,
+    rank: 4,
+    objectID: 12
+  },
+  {
+    name: "Jake",
+    matchesWon: 0,
+    rank: 3,
+    objectID: 13
+  },
+  {
+    name: "Jeevan",
+    matchesWon: 0,
+    rank: 2,
+    objectID: 14
+  },
+  {
+    name: "Andrzej",
+    matchesWon: 0,
+    rank: 1,
+    objectID: 15
+  },
+  {
+    name: "Matthew",
+    matchesWon: 0,
+    rank: 1,
+    objectID: 16
+  },
+  {
+    name: "Richard",
+    matchesWon: 0,
+    rank: 2,
+    objectID: 17
   }
 ];
 const matches = [
   {
-    match: "1. Pushpak vs Vikas"
+    match: "1. Francis vs Morgenne"
   },
   {
-    match: "2. Ron vs Brenton"
+    match: "2. Yilun Bai vs Abdi"
   },
   {
-    match: "3. Max vs Abdi"
-  },
-  {
-    match: "4. Carlos vs Pallishree"
+    match: "3. Abhijeet vs Pallishree"
   }
 ];
 // Renderer callback with condition
@@ -148,6 +187,7 @@ class App extends Component {
 
     this.onSearchChange = this.onSearchChange.bind(this);
     this.onDismiss = this.onDismiss.bind(this);
+    this.state.list.sort((a, b) => a.rank - b.rank);
   }
 
   onSearchChange(event) {
