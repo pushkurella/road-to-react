@@ -1,38 +1,100 @@
-.App {
+.page {
+  margin: 20px;
+}
+
+.interactions {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.table {
+  margin: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.table-header {
+  display: flex;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+.table-empty {
+  margin: 200px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.table-row {
+  display: flex;
+  line-height: 24px;
+  white-space: nowrap;
+  margin: 10px 0;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+}
+.table-row-header {
+  display: flex;
+  line-height: 24px;
+  white-space: nowrap;
+  margin: 10px 0;
+  padding: 10px;
+  background: #38BB6C;
+  border: 1px solid #e3e3e3;
+}
+.table-header > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 5px;
+}
+
+.table-row > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 5px;
+}
+
+.button-inline {
+  border-width: 20;
+  background: red;
+  color: white;
+  text-align: inherit;
+  -webkit-font-smoothing: inherit;
+  padding: 10px;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.button-active {
+  border-radius: 0;
+  border-bottom: 1px solid #38BB6C;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 10vh;
+  display: -webkit-flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.banner-header {
+  background-color: #282c34;
+  margin:auto;
+  padding: 5px;;
+  display: -webkit-flex;
+  justify-content: center;
+  color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-header{
+  padding-top: 18px;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+.match-header{
+  background-color: #282c34;
+  margin:auto;
+  padding: 5px;;
+  justify-content: center;
+  align-content: center;
+  color: white;
 }
